@@ -19,7 +19,7 @@ const CTASignupSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 px-6 md:px-16 bg-blue-50">
+    <section id='form-section' className="py-16 px-6 md:px-16 bg-blue-50">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Butuh Bengkel Terdekat dan Terpercaya?</h2>
         <p className="text-gray-600 mb-8">
