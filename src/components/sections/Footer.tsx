@@ -1,10 +1,5 @@
-import React from 'react';
-import {
-  EnvelopeIcon,
-} from '@heroicons/react/24/outline';
-import {
-  PhoneIcon,
-} from '@heroicons/react/24/solid';// Custom icon karena heroicons belum ada ikon Instagram
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { PhoneIcon } from "@heroicons/react/24/solid"; // Custom icon karena heroicons belum ada ikon Instagram
 
 const Footer: React.FC = () => {
   return (
@@ -14,7 +9,8 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="text-2xl font-bold mb-2">ServisGo</h3>
           <p className="text-gray-300">
-            Solusi cepat dan terpercaya untuk temukan bengkel recommended terdekat. #ServisTanpaRibet
+            Solusi cepat dan terpercaya untuk temukan bengkel recommended
+            terdekat. #ServisTanpaRibet
           </p>
         </div>
 
@@ -24,7 +20,13 @@ const Footer: React.FC = () => {
           <ul className="space-y-2 text-gray-300">
             <li className="flex items-center gap-2">
               <PhoneIcon className="h-5 w-5 text-white" />
-              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812-3456-7890</a>
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +62 812-3456-7890
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <EnvelopeIcon className="h-5 w-5 text-white" />

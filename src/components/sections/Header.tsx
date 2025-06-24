@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useState } from "react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +12,15 @@ const Header: React.FC = () => {
         <div className="text-xl font-bold text-blue-600">ServisGo</div>
 
         <nav className="hidden md:flex space-x-8 text-gray-700 font-medium">
-          <a href="#features" className="hover:text-blue-600">Fitur</a>
-          <a href="#how-it-works" className="hover:text-blue-600">Cara Kerja</a>
-          <a href="#cta" className="hover:text-blue-600">Coba Sekarang</a>
+          <a href="#features" className="hover:text-blue-600">
+            Fitur
+          </a>
+          <a href="#how-it-works" className="hover:text-blue-600">
+            Cara Kerja
+          </a>
+          <a href="#cta" className="hover:text-blue-600">
+            Coba Sekarang
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -30,9 +36,27 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md px-4 py-3 space-y-2 text-gray-700 font-medium">
-          <a href="#features" onClick={toggleMenu} className="block hover:text-blue-600">Fitur</a>
-          <a href="#how-it-works" onClick={toggleMenu} className="block hover:text-blue-600">Cara Kerja</a>
-          <a href="#cta" onClick={toggleMenu} className="block hover:text-blue-600">Coba Sekarang</a>
+          <a
+            href="#features"
+            onClick={toggleMenu}
+            className="block hover:text-blue-600"
+          >
+            Fitur
+          </a>
+          <a
+            href="#how-it-works"
+            onClick={toggleMenu}
+            className="block hover:text-blue-600"
+          >
+            Cara Kerja
+          </a>
+          <a
+            href="#cta"
+            onClick={toggleMenu}
+            className="block hover:text-blue-600"
+          >
+            Coba Sekarang
+          </a>
         </div>
       )}
     </header>
