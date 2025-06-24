@@ -77,13 +77,15 @@ const CTASignupSection: React.FC = () => {
     setMessage(null);
 
     try {
+      const formBody = new URLSearchParams(form).toString();
+
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbzs2tWi-a4UFaoyq-RhdxlQGlDusqhd8n93d4SGPNsRzSTDMpciVtYyLiHzJ2Cr8hW2ZQ/exec",
         {
           method: "POST",
-          body: JSON.stringify(form),
+          body: formBody,
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
         }
       );
