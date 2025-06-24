@@ -52,6 +52,7 @@ const CTASignupSection: React.FC = () => {
     type: "",
     transmission: "",
     issueCategory: "",
+    detailIssue: "",
   });
 
   const availableTypes = useMemo(() => {
@@ -104,6 +105,7 @@ const CTASignupSection: React.FC = () => {
           type: "",
           transmission: "",
           issueCategory: "",
+          detailIssue: "",
         });
       } else {
         setMessage({
@@ -236,6 +238,18 @@ const CTASignupSection: React.FC = () => {
                 sx={{ marginBottom: "15px" }}
               />
             )}
+          />
+          <TextField
+            fullWidth
+            multiline
+            minRows={3}
+            name="detailIssue"
+            label="Detail Masalah"
+            value={form.detailIssue}
+            onChange={handleInputChange}
+            placeholder="Contoh: Mobil susah di-starter, suara mesin kasar, AC tidak dingin..."
+            sx={{ marginBottom: "15px" }}
+            required
           />
 
           <button
