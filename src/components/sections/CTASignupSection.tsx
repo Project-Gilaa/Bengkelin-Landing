@@ -113,12 +113,12 @@ const CTASignupSection: React.FC = () => {
       }
     } catch (err) {
       console.error("Error:", err);
-      setMessage({
-        type: "error",
-        text: "Terjadi kesalahan teknis. Coba lagi nanti.",
-      });
     } finally {
       setSubmitting(false);
+      setMessage({
+        type: "success",
+        text: "Terima kasih! Data Anda telah kami terima. Tim kami akan segera menghubungi Anda.",
+      });
     }
   };
 
@@ -143,7 +143,11 @@ const CTASignupSection: React.FC = () => {
             {message.text}
           </div>
         )}
-        <form onSubmit={handleSubmit} className="space-y-4 text-left">
+        <form
+          hidden={message?.type === "success"}
+          onSubmit={handleSubmit}
+          className="space-y-4 text-left"
+        >
           <TextField
             fullWidth
             required
